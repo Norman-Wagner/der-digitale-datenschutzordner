@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #f7f6f2;
+  --color-surface: #f9f8f5;
+  --color-text: #28251d;
+  --color-text-muted: #7a7974;
+  --color-primary: #01696f;
+  --color-primary-hover: #0c4e54;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
