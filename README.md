@@ -4,12 +4,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status: Alpha](https://img.shields.io/badge/Status-Alpha-orange.svg)](docs/IMPLEMENTATION_REPORT.md)
 
-> **NOWA X** ist ein digitaler Datenschutzordner für kleine und mittlere Unternehmen.  
-> Er unterstützt Inhaberinnen und Inhaber sowie Büroleitungen von Bestattungsunternehmen  
-> mit 1–10 Filialen und bis zu 25 Mitarbeitenden – ohne eigene Datenschutzfachkraft.
+> **NOWA X** ist ein digitaler Datenschutzordner für kleine und mittlere Unternehmen –  
+> unabhängig davon, ob der Betrieb überwiegend digital, papierbasiert, online, offline  
+> oder mit mehreren räumlich getrennten Filialen arbeitet.
 
-> **Nutzen in den ersten 5 Minuten:** Die Einrichtung zeigt die drei wichtigsten,  
-> verständlich formulierten nächsten Schritte. Der Rest läuft im Hintergrund.
+> **Kein Sechs-Wochen-Zwang.** Alle Module sind sofort und frei zugänglich.  
+> Ein optionaler geführter Einrichtungsassistent ist verfügbar, aber keine Voraussetzung.
 
 ---
 
@@ -23,6 +23,16 @@ cp .env.example .env.local
 # Supabase-URL und Anon-Key eintragen
 npm run dev
 ```
+
+## Nutzungsarten
+
+| Modus | Beschreibung |
+|-------|--------------|
+| **Freier Datenschutzordner** | Alle Module sofort erreichbar – kein Assistent, keine Pflichtphasen |
+| **Geführte Einrichtung** | Optionaler Schritt-für-Schritt-Assistent (mit oder ohne Zeitvorgabe) |
+
+Der geführte Modus kann jederzeit verlassen und später fortgesetzt werden.  
+Er ist eine Hilfestellung – keine technische Voraussetzung.
 
 ## Betriebsarten
 
@@ -51,52 +61,51 @@ npm run dev
 | 13 | Geräte- & Anlagenregister | BYOD, Ausgabe, Verlust, Aussonderung | ✅ |
 | 14 | KI-Dienste-Verzeichnis | Freigabe, Risiko, AVV-Status | ✅ |
 | 15 | Sicherheits-Schnellcheck | 35 Fragen, Aufgaben, TOM-Vorschläge | ✅ |
-| 16 | Fahrzeuge & Fahrtenbuch | Vodafone/Driversnote, manuelle Bücher | ✅ |
-| 17 | Angehörigenkommunikation | Sicheres Portal, kein WhatsApp-Standard | ✅ |
-| 18 | Papierakten & Transport | Filialtransport, 3 Prioritäten, Ausleih | ✅ |
+| 16 | Papierakten & Transport | Filialtransport, Prioritäten, Ausleih | ✅ |
 
-## Bestatter-Branchenvorlagen (vollständig)
+## Branchenvorlagen
 
-```
-templates/bestattungsunternehmen/
-├── vvt/
-│   ├── 01_sterbefallannahme.json          # Erstaufnahme, Angehörigendaten
-│   ├── 02_uebernahme_verstorbener.json    # Überführung, Übernahmeprotokoll  
-│   ├── 03_hygienische_versorgung.json     # Besondere Kategorie: Gesundheitsdaten
-│   ├── 04_kremierung.json                 # Krematoriumsbeauftragung, Urne
-│   ├── 05_beisetzung_friedhof.json        # Friedhofsverwaltung, Grabrecht
-│   ├── 06_trauerfeier.json                # Technik, Redner, Musik
-│   ├── 07_bestattungsvorsorge.json        # Vorsorgevertrag, Datenspeicherung
-│   ├── 08_standesamt_formalitaeten.json   # Sterbeurkunde, Totenschein
-│   ├── 09_videoüberwachung_geschäftsräume.json
-│   └── 10_mitarbeiterdaten_hr.json
-├── tom/
-│   └── bestatter_tom_katalog.json
-├── aufgaben/
-│   └── bestatter_aufgabenvorlagen.json
-└── dienstleister/
-    └── bestatter_dienstleisterkategorien.json
-```
+Branchenvorlagen sind **optional** und klar als Hilfestellung gekennzeichnet.  
+Sie enthalten VVT-Entwürfe, TOM-Vorschläge, Dienstleisterkategorien und Aufgabenvorlagen.  
+Alle Vorlagen müssen geprüft, angepasst und freigegeben werden – sie ersetzen keine Fachberatung.
 
-## Rollen (Bestattungsunternehmen)
+Verfügbare Branchenvorlagen:
+
+| Branche | Pfad | Status |
+|---------|------|--------|
+| Bestattungsunternehmen | `templates/bestattungsunternehmen/` | ✅ Vollständig |
+| Floristik | `templates/floristik/` | 🔧 Vorbereitet |
+| Steinmetzbetriebe | `templates/steinmetz/` | 🔧 Vorbereitet |
+| Pflegeeinrichtungen | `templates/pflege/` | 🔧 Vorbereitet |
+| Handwerksbetriebe | `templates/handwerk/` | 🔧 Vorbereitet |
+| Sonstige Unternehmen | `templates/sonstige/` | 🔧 Vorbereitet |
+
+## Rollen
 
 | Rolle | Zugriff |
 |-------|--------|
-| Inhaber/Geschäftsführung | Vollständige Steuerung |
+| Inhaber / Geschäftsführung | Vollständige Steuerung aller Filialen |
 | Technische Administration | Technisch berechtigt, kein Zugriff auf vertrauliche Inhalte |
+| Datenschutzkoordinator | Filialübergreifend, alle Datenschutzmodule |
 | Leitende Angestellte | Zugewiesene Filialen und Aufgaben |
 | Büromitarbeitende | Eigene Filialen, zugewiesene Aufgaben |
-| Fahrerpersonal | Nur Checklisten und Fahrtenbuch |
-| Auszubildende | Klar zugewiesene Checklisten |
 | Externe Fachkraft (DSB) | Zeitlich begrenzt, MFA, ohne sensible Anhänge |
+
+## Mehrfilialbetrieb
+
+Unternehmen mit mehreren Filialen ohne gemeinsames lokales Netzwerk werden vollständig unterstützt:
+
+- Filialbezogene Nutzerrechte und Datentrennung
+- Zentrale Dokumente und lokale Abweichungen
+- Filialübergreifende Auswertung für Geschäftsführung und Datenschutzkoordination
+- Kein Zugriff auf fremde Filialen ohne ausdrückliche Berechtigung
 
 ## Rechtliche Hinweise
 
 - NOWA X unterstützt die **Dokumentation** von Datenschutzmaßnahmen.
-- Es **ersetzt keine Rechtsberatung**.
+- Es **ersetzt keine Rechtsberatung** und behauptet keine automatische DSGVO-Konformität.
 - Alle Vorlagen sind als Hilfestellung gekennzeichnet und müssen geprüft und freigegeben werden.
-- Daten Verstorbener fallen nicht unmittelbar unter die DSGVO – **hohe Schutzstandards gelten dennoch** für jedes Bestattungsunternehmen.
-- Die 20-Personen-Schwelle (§ 38 BDSG) ist nur ein Auslöser neben weiteren Kriterien.
+- Rechtlich oder fachlich relevante Entscheidungen müssen einer verantwortlichen Person zugeordnet und dokumentiert sein.
 
 ## Dokumentation
 
@@ -109,10 +118,9 @@ templates/bestattungsunternehmen/
 | [OFFLINE_SYNC.md](docs/OFFLINE_SYNC.md) | Offline & Synchronisation |
 | [DEPLOYMENT_MODES.md](docs/DEPLOYMENT_MODES.md) | Betriebsarten |
 | [TEST_STRATEGY.md](docs/TEST_STRATEGY.md) | Teststrategie |
-| [ROADMAP.md](docs/ROADMAP.md) | Entwicklungsplan, 10x-Version |
+| [ROADMAP.md](docs/ROADMAP.md) | Entwicklungsplan |
 | [HARDWARE_GUIDE.md](docs/HARDWARE_GUIDE.md) | Hardware-Empfehlungen |
 | [IMPLEMENTATION_REPORT.md](docs/IMPLEMENTATION_REPORT.md) | Implementierungsbericht |
-| [INTERVIEW_NOTES.md](docs/INTERVIEW_NOTES.md) | Produktinterviews (Stand 14.07.2026) |
 
 ## Technologie
 
@@ -126,4 +134,4 @@ templates/bestattungsunternehmen/
 ---
 
 © 2026 Norman Wagner / wagnerconnect – MIT-Lizenz  
-**Stand der Interview-Erkenntnisse: 14. Juli 2026. Noch keine Implementierungsfreigabe für alle Module.**
+**Hinweis: Alpha-Stand. Noch keine vollständige Implementierungsfreigabe für alle Module.**
