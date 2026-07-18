@@ -1,0 +1,48 @@
+{
+  "branche": "Bestattungsunternehmen",
+  "version": "1.0.0",
+  "hinweis": "Alle auftragsverarbeitenden Dienstleister erfordern einen AVV gemäß Art. 28 DSGVO",
+  "kategorien": [
+    {
+      "kategorie": "Krematorien",
+      "avv_erforderlich": true,
+      "typische_anbieter": [
+        "Kommunale Krematorien",
+        "Private Krematorien"
+      ],
+      "uebermittelte_daten": ["Personalien Verstorbener", "Einäscherungsgenehmigung"],
+      "rechtsgrundlage_uebermittlung": "Art. 6 Abs. 1 lit. b DSGVO"
+    },
+    {
+      "kategorie": "Friedhofsverwaltungen",
+      "avv_erforderlich": true,
+      "uebermittelte_daten": ["Personalien Verstorbener", "Grabstellendaten", "Angehörigendaten"],
+      "rechtsgrundlage_uebermittlung": "Art. 6 Abs. 1 lit. b DSGVO"
+    },
+    {
+      "kategorie": "Druckdienstleister (Trauerdruck)",
+      "avv_erforderlich": true,
+      "uebermittelte_daten": ["Name Verstorbener", "Lebensdaten", "ggf. Foto"],
+      "hinweis": "Einwilligung der Angehörigen für Foto erforderlich",
+      "rechtsgrundlage_uebermittlung": "Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)"
+    },
+    {
+      "kategorie": "Bestattungssoftware / IT-Dienstleister",
+      "avv_erforderlich": true,
+      "uebermittelte_daten": ["Alle gespeicherten Kundendaten"],
+      "hinweis": "Prüfen ob Hosting in EU/EWR oder angemessenes Drittland",
+      "rechtsgrundlage_uebermittlung": "Art. 6 Abs. 1 lit. b DSGVO"
+    },
+    {
+      "kategorie": "Buchhaltung / Steuerberater",
+      "avv_erforderlich": true,
+      "uebermittelte_daten": ["Rechnungsdaten", "Bankverbindungen"],
+      "rechtsgrundlage_uebermittlung": "Art. 6 Abs. 1 lit. c DSGVO (steuerrechtliche Pflicht)"
+    },
+    {
+      "kategorie": "Floristen und Kranzlieferanten",
+      "avv_erforderlich": false,
+      "hinweis": "Nur Lieferadressen, keine besonderen Kategorien → eigenverantwortlich"
+    }
+  ]
+}

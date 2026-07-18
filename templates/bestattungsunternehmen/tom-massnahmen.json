@@ -1,0 +1,48 @@
+{
+  "branche": "Bestattungsunternehmen",
+  "version": "1.0.0",
+  "rechtsgrundlage": "Art. 32 DSGVO",
+  "massnahmen": {
+    "zutrittskontrolle": [
+      "Schlüsselsystem mit dokumentierter Schlüsselausgabe",
+      "Alarmanlagen in Geschäftsräumen und Kühlräumen",
+      "Videoüberwachung Eingangsbereich (mit Hinweisbeschilderung)",
+      "Besucherprotokoll für sensible Bereiche"
+    ],
+    "zugangskontrolle": [
+      "Passwortgeschützte Computer mit automatischer Sperre (nach 5 Min.)",
+      "Individuelle Benutzerkonten für jeden Mitarbeiter",
+      "Rollenbasierte Zugriffsrechte (Sachbearbeiter / Leitung / DSB)",
+      "Zwei-Faktor-Authentifizierung für Remote-Zugriff"
+    ],
+    "datenuebertragung": [
+      "Verschlüsselte E-Mail-Kommunikation (S/MIME oder PGP) bei Übermittlung von Sterbedaten",
+      "HTTPS für alle Online-Formulare und Kundenportale",
+      "Sichere Fax-Alternative (digitale Übermittlung) für Behördenkommunikation",
+      "Verschlüsselte USB-Sticks für mobilen Datentransport"
+    ],
+    "datenspeicherung": [
+      "Verschlüsselte Festplatten (BitLocker / FileVault)",
+      "Tägliche automatische Datensicherung mit Off-Site-Backup",
+      "Physische Akten in abschließbaren Schränken",
+      "Getrennte Aufbewahrung Lebender (Vorsorge) und Verstorbener (Akutfall)"
+    ],
+    "datenloesch_entsorgung": [
+      "Zertifizierter Aktenvernichter (Sicherheitsstufe P-4 oder höher)",
+      "Datenlöschung nach NIST-Standard bei Hardware-Entsorgung",
+      "Dokumentierte Löschprotokolle"
+    ],
+    "mitarbeiter_sensibilisierung": [
+      "Jährliche DSGVO-Schulung für alle Mitarbeiter",
+      "Besondere Schulung zum Umgang mit Daten Verstorbener",
+      "Verpflichtungserklärung zur Vertraulichkeit",
+      "Klare Anweisung: keine Weitergabe von Sterbefällen an Dritte (Presse, Familie ohne Auftrag)"
+    ],
+    "bestattungsspezifisch": [
+      "Keine Fotografien von Verstorbenen ohne ausdrückliche Einwilligung der Angehörigen",
+      "Vertrauliche Entsorgung von Unterlagen mit Sterbedaten",
+      "Schutz der Trauerfeier-Informationen (kein öffentlicher Aushang ohne Einwilligung)",
+      "Dokumentiertes Übergabeprotokoll bei Urnenübergabe"
+    ]
+  }
+}

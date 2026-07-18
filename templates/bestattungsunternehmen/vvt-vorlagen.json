@@ -1,0 +1,99 @@
+{
+  "branche": "Bestattungsunternehmen",
+  "version": "1.0.0",
+  "rechtsgrundlage": "Art. 30 DSGVO",
+  "vorlagen": [
+    {
+      "id": "bu-vvt-001",
+      "name": "Sterbefall-Verwaltung und Trauerfamilienbetreuung",
+      "zweck": "Abwicklung von Bestattungen, Kommunikation mit Angehörigen, Koordination aller Bestattungsleistungen",
+      "rechtsgrundlage": "Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung), Art. 9 Abs. 2 lit. f DSGVO (Rechtmäßige Zwecke)",
+      "datenkategorien": [
+        "Name, Vorname, Geburtsdatum, Sterbedatum des Verstorbenen",
+        "Todesursache (sofern für Bestattungsart relevant)",
+        "Kontaktdaten der Angehörigen (Name, Adresse, Telefon, E-Mail)",
+        "Bankverbindung für Zahlungsabwicklung",
+        "Religiöse Zugehörigkeit (für Bestattungsform)",
+        "Sterbeurkunde, Totenschein"
+      ],
+      "betroffene": ["Verstorbene", "Angehörige", "Bevollmächtigte"],
+      "empfaenger": [
+        "Standesamt",
+        "Krematorien",
+        "Friedhofsverwaltungen",
+        "Bestattungsinstitut",
+        "Versicherungen (sofern beauftragt)"
+      ],
+      "drittlandtransfer": false,
+      "loeschfrist": "10 Jahre nach Abschluss (steuerrechtliche Aufbewahrungspflicht gem. § 147 AO)",
+      "technisch_organisatorische_massnahmen": "Zugangskontrolle, verschlüsselte Dateiablage, Mitarbeiterschulung"
+    },
+    {
+      "id": "bu-vvt-002",
+      "name": "Überführung und Transport Verstorbener",
+      "zweck": "Koordination und Durchführung von Überführungen national und international",
+      "rechtsgrundlage": "Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung), Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung)",
+      "datenkategorien": [
+        "Personalien des Verstorbenen",
+        "Sterbeurkunde, Totenschein, Leichenschauschein",
+        "Kontaktdaten der beauftragenden Angehörigen",
+        "Behördliche Genehmigungen (Überführungsgenehmigung)",
+        "Zielort und Bestattungsart"
+      ],
+      "betroffene": ["Verstorbene", "Angehörige"],
+      "empfaenger": [
+        "Behörden (Gesundheitsamt, Standesamt)",
+        "Partnerbestattungsunternehmen",
+        "Fluggesellschaften (bei internationaler Überführung)",
+        "Zollbehörden (international)"
+      ],
+      "drittlandtransfer": true,
+      "drittland_safeguards": "Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO bei internationalen Partnern",
+      "loeschfrist": "10 Jahre nach Abschluss",
+      "technisch_organisatorische_massnahmen": "Zugangskontrolle, sichere Datenübermittlung, Dokumentation der Genehmigungen"
+    },
+    {
+      "id": "bu-vvt-003",
+      "name": "Feuerbestattung und Kremierung",
+      "zweck": "Abwicklung von Feuerbestattungen, Koordination mit Krematorien, Urnenübergabe",
+      "rechtsgrundlage": "Art. 6 Abs. 1 lit. b DSGVO, Art. 6 Abs. 1 lit. c DSGVO",
+      "datenkategorien": [
+        "Personalien des Verstorbenen",
+        "Einäscherungsgenehmigung",
+        "Kontaktdaten der Angehörigen",
+        "Gewünschter Kremierungstermin",
+        "Urnenverbleib (Friedhof, Seebestattung, etc.)"
+      ],
+      "betroffene": ["Verstorbene", "Angehörige"],
+      "empfaenger": [
+        "Krematorien",
+        "Standesamt",
+        "Friedhofsverwaltungen"
+      ],
+      "drittlandtransfer": false,
+      "loeschfrist": "10 Jahre nach Abschluss",
+      "technisch_organisatorische_massnahmen": "Zugangskontrolle, Vier-Augen-Prinzip bei Urnenübergabe"
+    },
+    {
+      "id": "bu-vvt-004",
+      "name": "Bestattungsvorsorge und Vorsorgevertrag",
+      "zweck": "Abschluss und Verwaltung von Vorsorgeverträgen für die eigene Bestattung",
+      "rechtsgrundlage": "Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)",
+      "datenkategorien": [
+        "Name, Vorname, Geburtsdatum, Adresse",
+        "Bankverbindung für Treuhandkonto",
+        "Bestattungswünsche und -form",
+        "Bevollmächtigte Person",
+        "Religiöse Präferenzen"
+      ],
+      "betroffene": ["Vorsorgenehmer", "Bevollmächtigte"],
+      "empfaenger": [
+        "Treuhandkontobank",
+        "Notar (sofern Testament hinterlegt)"
+      ],
+      "drittlandtransfer": false,
+      "loeschfrist": "10 Jahre nach Vertragserfüllung oder -kündigung",
+      "technisch_organisatorische_massnahmen": "Verschlüsselte Ablage, Zugangskontrolle, regelmäßige Datensicherung"
+    }
+  ]
+}

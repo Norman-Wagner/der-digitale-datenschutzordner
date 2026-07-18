@@ -1,0 +1,61 @@
+{
+  "branche": "Bestattungsunternehmen",
+  "version": "1.0.0",
+  "aufgaben": [
+    {
+      "id": "bu-aufg-001",
+      "titel": "Datenschutzerklärung Website aktualisieren",
+      "beschreibung": "Prüfen ob Datenschutzerklärung aktuell ist, insbesondere Cookie-Banner und Kontaktformular",
+      "prioritaet": "hoch",
+      "frist_typ": "einmalig",
+      "kategorie": "Website",
+      "rechtsgrundlage": "Art. 13 DSGVO"
+    },
+    {
+      "id": "bu-aufg-002",
+      "titel": "AVV mit Krematorien prüfen und abschließen",
+      "beschreibung": "Für jeden Krematoriums-Partner einen Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO abschließen",
+      "prioritaet": "hoch",
+      "frist_typ": "einmalig",
+      "kategorie": "Auftragsverarbeitung",
+      "rechtsgrundlage": "Art. 28 DSGVO"
+    },
+    {
+      "id": "bu-aufg-003",
+      "titel": "Jährliche Mitarbeiterschulung DSGVO",
+      "beschreibung": "Alle Mitarbeiter zu Datenschutz schulen, besonders Umgang mit Sterbedaten und Angehörigeninformationen",
+      "prioritaet": "mittel",
+      "frist_typ": "jaehrlich",
+      "kategorie": "Schulung",
+      "rechtsgrundlage": "Art. 32 Abs. 4 DSGVO"
+    },
+    {
+      "id": "bu-aufg-004",
+      "titel": "Löschkonzept für Bestattungsakten umsetzen",
+      "beschreibung": "Bestattungsakten nach 10 Jahren prüfen und datenschutzkonform vernichten (zertifizierter Schredder)",
+      "prioritaet": "mittel",
+      "frist_typ": "regelmaessig",
+      "intervall": "jaehrlich",
+      "kategorie": "Datenlöschung",
+      "rechtsgrundlage": "Art. 5 Abs. 1 lit. e DSGVO, § 147 AO"
+    },
+    {
+      "id": "bu-aufg-005",
+      "titel": "Verzeichnis von Verarbeitungstätigkeiten (VVT) aktualisieren",
+      "beschreibung": "VVT auf Vollständigkeit und Aktualität prüfen, neue Verarbeitungen ergänzen",
+      "prioritaet": "mittel",
+      "frist_typ": "jaehrlich",
+      "kategorie": "VVT",
+      "rechtsgrundlage": "Art. 30 DSGVO"
+    },
+    {
+      "id": "bu-aufg-006",
+      "titel": "Betroffenenanfragen-Prozess testen",
+      "beschreibung": "Internen Prozess für Auskunftsersuchen (Art. 15 DSGVO) testen: Frist 1 Monat einhalten",
+      "prioritaet": "niedrig",
+      "frist_typ": "jaehrlich",
+      "kategorie": "Betroffenenrechte",
+      "rechtsgrundlage": "Art. 15 DSGVO"
+    }
+  ]
+}
