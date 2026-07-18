@@ -1,0 +1,96 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  typecheck:
+    name: TypeScript Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run typecheck
+
+  lint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run lint
+
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run test
+
+  validate-migrations:
+    name: Validate SQL Migrations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check migration files exist
+        run: |
+          echo "Checking migration files..."
+          ls -la supabase/migrations/
+          echo "Found $(ls supabase/migrations/*.sql | wc -l) migration files"
+      - name: Validate migration naming convention
+        run: |
+          for f in supabase/migrations/*.sql; do
+            filename=$(basename "$f")
+            if ! echo "$filename" | grep -qE '^[0-9]{14}_[a-z0-9_]+\.sql$'; then
+              echo "ERROR: Invalid migration filename: $filename"
+              exit 1
+            fi
+          done
+          echo "All migration filenames are valid."
+
+  validate-templates:
+    name: Validate Branch Templates (JSON)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON templates
+        run: |
+          echo "Validating template JSON files..."
+          for f in templates/**/*.json; do
+            echo "Checking $f"
+            python3 -m json.tool "$f" > /dev/null && echo "OK: $f" || (echo "INVALID JSON: $f" && exit 1)
+          done
+          echo "All template files are valid JSON."
+
+  build:
+    name: Build Check
+    runs-on: ubuntu-latest
+    needs: [typecheck, lint]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Build Next.js app
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder-anon-key
